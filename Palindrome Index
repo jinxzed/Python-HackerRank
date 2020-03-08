@@ -1,9 +1,10 @@
 def palindromeIndex(s):
+    # if the string is already a palindrome
     if s == s[::-1]:
         return -1
-
+    
+    #to check for palindrome you only need to check half of the string
     for i in range(len(s)//2):
-        
         if s[i]!= s[len(s)-1-i]:
             s1 = s[:i] + s[i+1:]
             if s1 == s1[::-1]:
